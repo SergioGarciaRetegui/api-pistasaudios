@@ -1,0 +1,35 @@
+{
+    "status":"ok",
+    "audios": [
+        {
+        "identificador":1,
+        "titulo":"titulo 1",
+        "duracion":110,
+        "interprete":"interprete 1"
+       }, 
+       {
+        "identificador":2,
+        "titulo":"titulo 2",
+        "duracion":120,
+        "interprete":"interprete 2"
+       }, 
+       {
+        "identificador":3,
+        "titulo":"titulo 12",
+        "duracion":145,
+        "interprete":"interprete 3"
+       }, 
+       {
+        "identificador":4,
+        "titulo":"titulo 65",
+        "duracion":134,
+        "interprete":"interprete 1"
+       }, 
+       {
+        "identificador":5,
+        "titulo":"titulo 14",
+        "duracion":160,
+        "interprete":"interprete 2"
+       } 
+    ]
+}
