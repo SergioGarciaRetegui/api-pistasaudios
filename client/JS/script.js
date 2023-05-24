@@ -68,7 +68,8 @@ function mostraPista(){
             <td>${rg.id}</td>
             <td>${rg.titulo}</td>
             <td>${rg.duracion}</td>            
-            <td>${rg.interprete}</td>            
+            <td>${rg.interprete}</td>
+            <td><a href="pistaDetails.html?identificador=${rg.id}">Editar</a></td>            
         </tr>
         `;
     }

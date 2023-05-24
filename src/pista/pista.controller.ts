@@ -3,6 +3,8 @@ import { PistaService } from './pista.service';
 
 @Controller('pista')
 export class PistaController {
+
+    private pistas = [];
     
     constructor(private pistaService: PistaService){}
     

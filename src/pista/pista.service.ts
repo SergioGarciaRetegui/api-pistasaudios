@@ -78,6 +78,7 @@ constructor(){
         this.pistasAudio[pos].duracion = body.duracion;
         this.pistasAudio[pos].interprete = body.interprete;
         this.pistasAudio[pos].titulo = body.titulo;
+        this.updateDelete();
         return {
             "msj": `Pista ${id} modificada`,
             "Pista": this.pistasAudio[pos]
@@ -97,6 +98,7 @@ constructor(){
     }
     if(existe){
         this.pistasAudio.splice(pos,1);
+        this.updateDelete();
         return {
             "msj": `Pista ${id} eliminada`,
         }
@@ -105,4 +107,14 @@ constructor(){
         return {"Msj": `Pista ${id} no encontrada`}
     }
  }
+
+private updateDelete():void{
+    let csv = "";
+    for (let i=0;i<this.pistasAudio.length;i++){
+        csv+=`${this.pistasAudio[i].getId()},${this.pistasAudio[i].getTitulo()},${this.pistasAudio[i].getDuracion()},${this.pistasAudio[i].getInterprete()}\n`;        
+    }
+    csv=csv.substring(0,csv.length-1);
+    fs.writeFileSync('pistas.csv',csv);
+}
+
 }
